@@ -1,0 +1,149 @@
+:root{
+    --primary-color:#fff;
+    --secondary-color: darkgrey;
+    --text-color: black;
+}
+
+.dark-mode{
+    --primary-color:#212121;
+    --secondary-color: #fff;
+    --text-color: lightgrey;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+#icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 12%;
+}
+
+img{
+    height: 110px;
+    width: 320px;
+    margin: 4%;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    margin: 1%;
+    cursor: pointer;
+}
+
+button:hover{
+    outline: darkgrey;
+    box-shadow: 2px 4px 4px #838383;
+}
+
+i{
+    color: grey;
+}
+
+input{
+    width: 450px;
+    height: 35px;
+    border: none;
+    font-size: medium;
+    color: var(--text-color);
+    border-bottom: 1.59px grey solid;
+    padding: 0 10px;
+    outline: none;
+    background: none;
+}
+
+/* Loader Css */
+.loader {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    font-family: "Cinzel Decorative", cursive;
+  }
+  
+  .pulse {
+    stroke-dasharray: 1840;
+    stroke-dashoffset: 3680;
+    animation: dash 2s ease-out infinite;
+    stroke: url(#strokeGradient);
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  span {
+    color: #eee;
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    margin-top: 15px;
+    animation: blink 900ms linear infinite alternate;
+  }
+  
+  @keyframes blink {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* Loader css */
+
+/* Css for animation of images */
+.motion{
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+    z-index: 0;
+    /* width: 500px; */
+}
+
+@-webkit-keyframes up-down{
+    0%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+@keyframes up-down{
+    0%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+/* End of animation of images */
+
+@media (max-width: 768px) {
+    input{
+        width: 230px;
+    }
+
+    .center{
+        margin-top: 50%;
+    }
+  }
